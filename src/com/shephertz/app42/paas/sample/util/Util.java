@@ -50,7 +50,7 @@ public class Util {
 	 * This function fetches the DB Name from Config.properties
 	 */
 	public static String getDBName() {
-		return "testdb";
+		return "test";
 		//return dbProps.getProperty("app42.paas.db.name");
 	}
 
