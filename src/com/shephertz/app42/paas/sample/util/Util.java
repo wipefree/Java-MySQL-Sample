@@ -10,7 +10,7 @@ public class Util {
 
 	static Properties dbProps = new Properties();
 	static File dbFile = null;
-	/*static {
+	static {
 		try {
 			dbFile = new File("ROOT/Config.properties");
 			dbProps.load(new FileInputStream(dbFile.getAbsolutePath()));
@@ -20,46 +20,41 @@ public class Util {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}*/
+	}
 
 	/*
 	 * This function fetches the DB Ip from Config.properties
 	 */
 	public static String getDBIp() {
-		return "192.168.0.245";
-		//return dbProps.getProperty("app42.paas.db.ip");
+		return dbProps.getProperty("app42.paas.db.ip");
 	}
 
 	/*
 	 * This function fetches the DBPassword from Config.properties
 	 */
 	public static String getDBPassword() {
-		return "root";
-		//return dbProps.getProperty("app42.paas.db.password");
+		return dbProps.getProperty("app42.paas.db.password");
 	}
 
 	/*
 	 * This function fetches Username from Config.properties
 	 */
 	public static String getDBUser() {
-		return "root";
-		//return dbProps.getProperty("app42.paas.db.username");
+		return dbProps.getProperty("app42.paas.db.username");
 	}
 	
 	/*
 	 * This function fetches the DB Name from Config.properties
 	 */
 	public static String getDBName() {
-		return "test";
-		//return dbProps.getProperty("app42.paas.db.name");
+		return dbProps.getProperty("app42.paas.db.name");
 	}
 
 	/*
 	 * This function fetches the DB Port from Config.properties
 	 */
 	public static int getDBPort() {
-		return 3306;
-		//return new Integer(dbProps.getProperty("app42.paas.db.port"));
+		return new Integer(dbProps.getProperty("app42.paas.db.port"));
 	}
 
 }
